@@ -1,4 +1,4 @@
-package Ejercicio2
+/*package Ejercicio2
 
 import org.json.JSONArray
 import org.json.JSONObject
@@ -25,3 +25,17 @@ fun main (args: Array<String>){
     }
     println("Variacion total: $variacioTotal")
 }
+
+fun main(args: Array<String>) {
+    val r_json = FileReader("VariacionPoblacional.json")
+    val arrel = JSONTokener(r_json).nextValue() as JSONArray
+    val data = arrel.getJSONObject(14).getJSONArray("Data")
+    var variacionTotal: Int = 0
+    for (e in data){
+        val data = e as JSONObject
+        println("${e.get("NombrePeriodo")} ---> ${e.get("Valor")}")
+        variacionTotal += e.get("Valor").toString().toInt()
+    }
+    println("Variación total: $variacionTotal")
+}
+*/
