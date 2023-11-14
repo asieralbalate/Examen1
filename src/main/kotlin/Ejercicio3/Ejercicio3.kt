@@ -15,7 +15,10 @@ fun main(){
     var datos = f2.readLine()
     var final: StringBuilder
     while (datos != null){
-        println(output.write(datos + ": " + f.readFloat() + "m - " + f.readInt() + "kg."))
+
+        val string = datos + ": " + f.readFloat() + "m - " + f.readInt() + "kg."
+        output.write(string)
+        println(string)
         datos = f2.readLine()
         //falta sacarlo por pantalla pero no me da tiempo :)
     }
